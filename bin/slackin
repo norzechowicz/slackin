@@ -31,6 +31,8 @@ if (!org || !token) {
 var port = flags.port;
 var hostname = flags.hostname;
 
+console.log(port);
+
 slackin(flags).listen(port, hostname, function(err){
   if (err) throw err;
   if (!flags.silent) console.log('%s – listening on %s:%d', new Date, hostname, port);

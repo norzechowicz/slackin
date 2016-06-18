@@ -31,7 +31,12 @@ if (!org || !token) {
 var port = flags.port;
 var hostname = flags.hostname;
 
+console.log(process.env.PORT);
+console.log(require('hostenv').PORT);
+console.log(require('hostenv').HOSTNAME);
+console.log(process.env.WEBSITE_HOSTNAME);
 console.log(port);
+console.log(hostname);
 
 slackin(flags).listen(port, hostname, function(err){
   if (err) throw err;
